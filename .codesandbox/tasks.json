@@ -6,8 +6,8 @@
           "command": "conda init zsh"
       },
       {
-          "name": "create new conda enviornment",
-          "command": "conda install -n Camelot ipykernel --update-deps --force-reinstall"
+          "name": "install ipykernel",
+          "command": "conda run -n Camelot pip install ipykernel"
       }
     ]
   }

@@ -1,0 +1,13 @@
+{
+    "$schema": "https://codesandbox.io/schemas/tasks.json",
+    "setupTasks": [
+      {
+          "name": "activate conda environment",
+          "command": "conda init zsh"
+      },
+      {
+          "name": "create new conda enviornment",
+          "command": "conda install -n Camelot ipykernel --update-deps --force-reinstall"
+      }
+    ]
+  }

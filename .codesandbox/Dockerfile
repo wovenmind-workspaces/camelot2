@@ -48,9 +48,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends ghostscript pyt
 
 # Create a Conda environment with Python 3.7
 RUN conda create -n Camelot python=3.7
+COPY . .
 
-# Install pip in the Conda environment
-RUN /opt/conda/envs/Camelot/bin/conda install pip
-
-RUN /opt/conda/envs/Camelot/bin/pip install -r requirements.txt
+RUN /opt/conda/envs/Camelot/bin/pip install -r ./requirements.txt
 

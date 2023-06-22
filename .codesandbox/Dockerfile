@@ -43,3 +43,14 @@ RUN curl -L -o miniforge_installer.sh https://github.com/conda-forge/miniforge/r
 # Put conda in path so we can use conda activate
 ENV PATH=$CONDA_DIR/bin:$PATH
 
+###### Project Config ######
+RUN apt-get update && apt-get install -y --no-install-recommends ghostscript python3-tk
+
+# Create a Conda environment with Python 3.7
+RUN conda create -n Camelot python=3.7
+
+# Install pip in the Conda environment
+RUN /opt/conda/envs/Camelot/bin/conda install pip
+
+RUN /opt/conda/envs/Camelot/bin/pip install -r requirements.txt
+

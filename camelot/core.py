@@ -9,7 +9,7 @@ from operator import itemgetter
 import numpy as np
 import pandas as pd
 
-from cv2 import cv2
+import cv2
 
 from .utils import (
     get_index_closest_point,
